@@ -28,7 +28,7 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  console.log(str);
+  return str;
 }
 
 function suma(x, y) {
@@ -41,7 +41,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  return x - y;
+   return x- y;
 }
 
 function multiplica(x, y) {
@@ -53,7 +53,7 @@ function multiplica(x, y) {
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  return x / y;
+  return x/y;
 }
 
 function sonIguales(x, y) {
@@ -112,9 +112,7 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  var resto;
-  resto = x % y;
-  return resto;
+  return  x % y;
 }
 
 function esPar(num) {
@@ -123,7 +121,7 @@ function esPar(num) {
   // Tu código:
   var par;
   par = num % 2;
-  if( par ==0){
+  if( par ===0){
     return true;
   }
   else{
@@ -200,14 +198,14 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  var resultado;
-  if(numero >0){
-    resultado ="ES POSITIVO";
-    return resultado;
+  if(numero === 0) {
+    return false;
   }
-  else{
-    resultado = "ES NEGATIVO";
-    return resultado;
+  else if(numero > 0) {
+    return "Es positivo";
+  }
+  else {
+    return "Es negativo";
   }
 }
 
@@ -224,26 +222,21 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  var cadena;
-  cadena = nombre + '  ' + apellido;
-  return cadena;
+  var combinado = nombre + ' ' + apellido;
+  return combinado;
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  var saludo = "Hola ";
-  var resultado;
-  resultado = saludo.concat(nombre) ;
-  return resultado;
+  return 'Hola ' + nombre + '!';
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  var area = alto * ancho;
-  return area;
+  return alto * ancho;
 }
 
 
@@ -259,9 +252,7 @@ function retornarPerimetro(lado){
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  var area;
-  area = base * altura;
-  return area;
+  return (base * altura)/2
 
 }
 
@@ -282,43 +273,13 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  var contador;
-  contador = letra.length;
-  if(contador!=1){
-      console.log("DATO INCORRECTO");
+  if(letra.length > 1){
+    return "Dato incorrecto"
   }
-  else{
-     if(letra=='a'){
-      console.log("ES UNA VOCAL");
-      }
-      else{
-          if(letra=='e'){
-              console.log("ES UNA VOCAL");
-              }
-              else{
-                  if(letra=='i'){
-                      console.log("ES UNA VOCAL");
-                      }
-                      else{
-                          if(letra=='o'){
-                              console.log("ES UNA VOCAL");
-                              }
-                              else{
-                                  if(letra=='u'){
-                                      console.log("ES UNA VOCAL");
-                                      }
-                                  else{
-                                      console.log("NO ES UNA VOCAL")
-                                  }
-                                      
-                              }
-                      }
-                     
-              }
-             
-      }
-  
+  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+    return "Es vocal";
   }
+  return "Dato incorrecto";
   
 }
 
